@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Compound Interest Calculator</title>
+    <script type="module" crossorigin src="./assets/index-35092fb2.js"></script>
+    <link rel="stylesheet" href="./assets/index-411dd0b0.css">
+  </head>
+  <body>
+    <header>
+      <div class="col-4">
+        <div class="emblem">Compound Interest Calculator_</div>
+      </div>
+      <div class="col-8">
+        <h1>Compound Interest Calculator</h1>
+        <p>I built this to quickly project a final sum based on the metrics listed on the form, and copy the values to CSV.</p>
+        <p>This is easier to use than other methods, so I thought I'd turn it into a small project an put it online incase it's useful for others.</p>
+      </div>
+    </header>
+    <section>
+      <div class="col-6">
+        <form id="main-form">
+          <label for="initial-investment" class="block mb-2">Initial Investment</label>
+          <input type="number" id="initial-investment" class="appearance-none rounded w-full py-2 px-3 focus:outline-none focus:shadow-outline mb-2" required />
+          <label for="interest-rate" class="block mb-2">Interest rate</label>
+          <input type="number" id="interest-rate" required class="appearance-none rounded w-full py-2 px-3 focus:outline-none focus:shadow-outline mb-2" />
+          <label for="initial-investment" class="block mb-2">Time increments (i.e no. of weeks or months)</label>
+          <input type="number" id="time-increments" required min="1" max="160" class="appearance-none rounded w-full py-2 px-3 focus:outline-none focus:shadow-outline mb-4" />
+          <input type="submit" value="Submit" class="bg-gray-200 hover:bg-[#1b1f3c] text-black hover:text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" />
+          <button id="copy-csv" class="bg-[#1b1f3c] hover:bg-gray-200 hover:text-black text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer ml-2">Copy to CSV</button>
+        </form>
+      </div>
+
+      <div class="col-6">
+        <div class="table-container">
+          <table class="min-w-full">
+            <thead>
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left">Period</th>
+                <th scope="col" class="px-6 py-3 text-left">Compounding Interest</th>
+              </tr>
+            </thead>
+            <tbody id="output"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    
+  </body>
+</html>
