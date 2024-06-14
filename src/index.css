@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --xl-heading: 3rem;
+  --lg-heading: 2.4rem;
+  --md-heading: 1.75rem;
+  --sm-heading: 1.5rem;
+  --xs-heading: 1rem;
+}
+
+html,
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  width: 100%;
+  background: #0a0f25;
+  color: white;
+}
+
+header,
+section {
+  display: flex;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--xl-heading);
+  line-height: calc(var(--xl-heading) + 0.35rem);
+  margin-bottom: 0.85rem;
+}
+
+h1 span {
+  font-size: var(--md-heading);
+}
+
+h2 {
+  font-size: var(--lg-heading);
+  line-height: calc(var(--lg-heading) + 1.25rem);
+}
+
+h3 {
+  font-size: var(--md-heading);
+  line-height: calc(var(--md-heading) + 1.1rem);
+}
+
+h3 {
+  font-size: var(--md-heading);
+  line-height: calc(var(--md-heading) + 1.1rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+p,
+ul,
+ul li,
+ul li a {
+  font-size: 1rem;
+  line-height: 1.55rem;
+  font-weight: 300;
+}
+
+ul li a {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+p {
+  margin-bottom: 0.7rem;
+}
+
+[class*='col-'] {
+  min-height: 1px;
+  height: auto;
+  padding: 0 16px;
+  border: 0;
+  position: relative;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.table-container {
+  max-height: 280px;
+  overflow: scroll;
+}
+.table-container thead {
+  border-bottom: 1px solid #1b1f3c;
+}
+.table-container thead tr th {
+  color: white;
+}
+
+input[type='number'] {
+  background-color: #1b1f3c;
+  color: white;
+}
+
+label,
+th {
+  font-weight: 300;
+}
+
+#main-form {
+  padding-top: 16px;
+}
+
+/* Emblem */
+
+.emblem {
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-right: auto;
+  font-size: 26px;
+  font-weight: bold;
+  animation: 25s linear infinite spinZ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.emblem span {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.emblem span:last-of-type {
+  opacity: 0;
+}
+@keyframes spinZ {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+::selection,
+::-webkit-selection,
+::-moz-selection {
+  background: white;
+  color: #0a0f25;
+}
+
+@media (max-width: 896px) {
+  header,
+  section {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+  }
+  header {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  [class*='col-'] {
+    width: 100%;
+  }
+  .emblem {
+    display: none;
+  }
+
+  .table-container {
+    max-height: initial;
+    margin-top: 20px;
+  }
+}
